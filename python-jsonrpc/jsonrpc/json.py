@@ -115,7 +115,7 @@ def dumpParts (obj):
                 yield part
         yield u']'
     elif objType in [IntType, LongType, FloatType]:
-        yield unicode(obj)
+        yield unicode(repr(obj))
     else:
         raise JSONEncodeException(obj)
     
